@@ -13,3 +13,11 @@ Anyway that is not the real reason for this post, and if you want to learn more 
 The real reason for this post is to help with testing your JWT authenticated APIs in Postman. So here goes.
 
 ## Testing your APIs with JWT authentication tokens
+### The problem
+When building APIs you want a way to be able to test your endpoints, right? Right. That's where tools like Postman come in and they are awesome at what they do. Postman even has authentication sorted out of the box. Your thinking great I'll just setup my token in there and off I go, however Postman doesn't support JWT token authentication out of the box like it does for Oauth and basic authentication etc.
+
+Also if you are using a long lived JWT token you can just set a `Authorization: Bearer <token>` header and use that for authentication, however, this technique while perfectly valid doesn't mimic your APIs workflow unless your utilising long lived tokens in your app.
+
+So, if you want to use Postman in your API workflow and use it in the same way that your API intended your tokens to be used then I have 2 methods for implementing JWT authentication tokens depending on your API setup.
+
+### Solution 1: Server generated single use JWT tokens
