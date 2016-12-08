@@ -21,3 +21,5 @@ Also if you are using a long lived JWT token you can just set a `Authorization: 
 So, if you want to use Postman in your API workflow and use it in the same way that your API intended your tokens to be used then I have 2 methods for implementing JWT authentication tokens depending on your API setup.
 
 ### Solution 1: Server generated single use JWT tokens
+
+### Solution 2: Client generated server to server single use JWT tokens
